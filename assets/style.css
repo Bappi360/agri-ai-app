@@ -1,0 +1,227 @@
+/* ==========================================================================
+   AgriSathi AI - Agricultural Theme Stylesheet
+   Designed for High-Contrast, Fresh, Organic, Farmer-friendly Aesthetics
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --agri-primary: #1b4332;
+    --agri-secondary: #2d6a4f;
+    --agri-leaf: #40916c;
+    --agri-sprout: #52b788;
+    --agri-mint: #74c69d;
+    --agri-pale: #e8f5e9;
+    --agri-gold: #e9c46a;
+    --agri-earth: #8a5a36;
+    --agri-dark: #1e293b;
+    --agri-light: #f8fafc;
+    --agri-card-bg: #ffffff;
+    --agri-border: #d8f3dc;
+}
+
+html, body, [class*="css"] {
+    font-family: 'Hind Siliguri', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* App Header Banner */
+.agri-banner {
+    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 55%, #40916c 100%);
+    color: #ffffff;
+    padding: 1.8rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(27, 67, 50, 0.25);
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.agri-banner::after {
+    content: "🌾";
+    font-size: 6.5rem;
+    position: absolute;
+    right: 1.5rem;
+    bottom: -1rem;
+    opacity: 0.22;
+    pointer-events: none;
+}
+
+.agri-banner h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em;
+    color: #ffffff !important;
+}
+
+.agri-banner p {
+    font-size: 1.05rem;
+    margin: 0.5rem 0 0 0;
+    color: #d8f3dc;
+    font-weight: 500;
+}
+
+/* Feature & Metric Cards */
+.agri-card {
+    background: #ffffff;
+    border: 1px solid var(--agri-border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    margin-bottom: 1rem;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.agri-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(45, 106, 79, 0.12);
+    border-color: var(--agri-sprout);
+}
+
+.agri-card h4 {
+    color: var(--agri-primary);
+    margin-top: 0;
+    font-weight: 600;
+}
+
+/* Quick Query Chips */
+.query-chip {
+    display: inline-block;
+    background-color: #e8f5e9;
+    color: #1b4332;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 4px 6px 6px 0;
+    border: 1px solid #b7e4c7;
+    font-weight: 500;
+}
+
+/* Fertilizer Result Metrics */
+.fert-metric-box {
+    background: linear-gradient(to bottom right, #f7fee7, #ecfccb);
+    border: 1px solid #d9f99d;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.fert-metric-val {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #365314;
+}
+
+.fert-metric-label {
+    font-size: 0.9rem;
+    color: #4d7c0f;
+    font-weight: 600;
+}
+
+/* Badges */
+.badge-green {
+    background-color: #d8f3dc;
+    color: #1b4332;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+.badge-amber {
+    background-color: #fef3c7;
+    color: #92400e;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+/* Streamlit Tabs Customization */
+button[data-baseweb="tab"] {
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    padding: 0.75rem 1.25rem !important;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: #1b4332 !important;
+    border-bottom-color: #2d6a4f !important;
+}
+
+/* Chat container aesthetic enhancements */
+.stChatMessage {
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+}
+
+/* Primary Button Styling */
+div.stButton > button[kind="primary"] {
+    background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 10px rgba(27, 67, 50, 0.2) !important;
+}
+
+div.stButton > button[kind="primary"]:hover {
+    background: linear-gradient(135deg, #40916c 0%, #2d6a4f 100%) !important;
+    box-shadow: 0 6px 14px rgba(27, 67, 50, 0.3) !important;
+}
+
+/* ==========================================================================
+   Mobile Responsive Adjustments (< 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .agri-banner {
+        padding: 1.2rem 1.2rem;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+    }
+
+    .agri-banner h1 {
+        font-size: 1.5rem !important;
+        line-height: 1.3;
+    }
+
+    .agri-banner p {
+        font-size: 0.88rem !important;
+    }
+
+    .agri-banner::after {
+        font-size: 4rem;
+        right: 0.5rem;
+        bottom: -0.5rem;
+        opacity: 0.15;
+    }
+
+    .agri-card {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .fert-metric-box {
+        margin-bottom: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    .fert-metric-val {
+        font-size: 1.4rem;
+    }
+
+    button[data-baseweb="tab"] {
+        font-size: 0.88rem !important;
+        padding: 0.5rem 0.6rem !important;
+    }
+
+    /* Easy tap targets on mobile */
+    button, input, select, textarea {
+        min-height: 44px;
+    }
+}
+
